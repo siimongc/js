@@ -8,4 +8,6 @@ switch (true) {
     case 3:
         console.log('3');
         break;
+    case 4:
+        console.log('4');
 }
