@@ -3,8 +3,6 @@ se debe declarar antes de usar la variable */
 
 /*cuando en visula studio code aparece la palabra como opaca es por que la variable o funcion no se esta usando*/
 
-//Bien
-
 var nombre = "Aaron";
 
 function saludo() {
