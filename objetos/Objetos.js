@@ -1,10 +1,21 @@
-var objetoCarro = {
-    marca: "mazda",
-    modelo: "rx-7",
-    año: "1990",
-    detalle: function(){
-        console.log(`auto ${this.modelo} ${this.año}`);
+function Perro(name, age, race, trucos, aprenderTruco){
+    this.name = name;
+    this.age = age;
+    this.race = race;
+    this.trucos = trucos;
+    this.aprenderTruco = function(trucoNuevo){
+        this.trucos.push(trucoNuevo);
     }
 };
 
-objetoCarro.año;
+const Aron = new Perro(
+    "Aron",
+    6,
+    "Cruce",
+    ["sentarse",
+     "ladrar",
+     "acostarse"    ]
+
+);
+
+console.log(Aron)

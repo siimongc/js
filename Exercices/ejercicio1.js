@@ -1,4 +1,3 @@
-
 function solution(estudiantes, deathCount, nuevo) {
 
   if (deathCount === 0) {
