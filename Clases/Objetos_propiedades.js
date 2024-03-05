@@ -8,11 +8,24 @@ class Car {
         Modification = []
     }){
         this.model = model;
-        this.brand = brand;
+        this._brand = brand;
         this.traction = traction;
         this.doors = doors;
         this.engine = engine;
         this.Modification = Modification;
+    }
+
+    get brand() {
+        return this._brand;
+    }
+
+    set brand(brand){
+        if(brand === "carro_feo"){
+            console.error("ese no")
+        }
+        else{
+            this._brand = brand;
+        }
     }
 }
 
@@ -90,4 +103,5 @@ gareje_rionegro.add_car(Pagani_zonda_r);
 
 console.log(gareje_medllo);
 console.log(gareje_rionegro);
+
 
