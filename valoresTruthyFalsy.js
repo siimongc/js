@@ -12,3 +12,4 @@ Boolean("a"); //true para cualquier caracter o espacio en blanco en el string
 Boolean([]); //true aunque el array esté vacío
 Boolean({}); //true aunque el objeto esté vacío
 Boolean(function(){}); //Cualquier función es verdadera también
+
