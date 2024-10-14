@@ -217,13 +217,3 @@ Escribe el nombre de la persona con la que quieres hablar (o presiona 'x' para s
 {majo}: Hola Simon, ¿cómo estás?
 ```
 
-Introduce tu nombre de usuario: maria
-Usuarios conectados:
-simon
-juan
-
-Escribe el nombre de la persona con la que quieres hablar (o presiona 'x' para salir): simon
-
-{Simon}: ¡Todo bien! ¿Y tú?
-{majo}: Hola Simon, ¿cómo estás?
-```
