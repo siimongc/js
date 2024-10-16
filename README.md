@@ -33,30 +33,31 @@ El proyecto incluye un *Makefile* para facilitar la compilación y ejecución de
 
 Para compilar tanto el servidor como el cliente, simplemente ejecuta el siguiente comando en la terminal:
 
-bash
+```bash
 make
-
+```
 
 Esto ejecutará las reglas del Makefile y compilará los archivos, generando los binarios servidor y cliente.
 
 #### 2. Ejecutar el servidor
 Para iniciar el servidor, utiliza el siguiente comando:
 
-bash
+```bash
 make run-server
-
+```
 
 El servidor estará ahora a la espera de conexiones en el puerto 8080. Verás un mensaje en la terminal indicando que el servidor está escuchando:
 
-bash
+```bash
 Servidor escuchando en el puerto 8080...
+```
 
 #### 3. Ejecutar el cliente
 Para iniciar un cliente, abre otra terminal y utiliza el siguiente comando:
 
-bash
+```bash
 make run-client
-
+```
 El cliente se conectará al servidor en localhost (127.0.0.1) en el puerto 8080. Al iniciar, el cliente te pedirá que ingreses tu nombre de usuario.
 
 Puedes iniciar múltiples clientes para simular varias conexiones, cada cliente en una terminal diferente.
@@ -66,7 +67,7 @@ Una vez que estés conectado, el cliente recibirá la lista de usuarios disponib
 
 Ejemplo de flujo del cliente:
 
-bash
+```bash
 Introduce tu nombre de usuario: simon
 Ver lista de usuarios conectados:
 
@@ -75,7 +76,7 @@ maria
 juan
 
 Escribe el nombre de la persona con la que quieres hablar (o presiona 'x' para salir):
-
+```
 
 Enviar mensajes: Los mensajes aparecerán con el formato "{Usuario}: mensaje" en ambas consolas (tanto para el remitente como para el destinatario).
 
@@ -86,14 +87,14 @@ Salir: Si el cliente cierra la conexión abruptamente (por ejemplo, usando Ctrl 
 #### 1. Limpiar el proyecto
 Si deseas eliminar los archivos binarios generados (servidor y cliente), puedes ejecutar:
 
-bash
+```bash
 make clean
-
+```
 
 #### Ejemplo de Uso
 Cliente 1 (simon):
 
-bash
+```bash
 Introduce tu nombre de usuario: simon
 Usuarios conectados:
 maria
@@ -103,10 +104,10 @@ Escribe el nombre de la persona con la que quieres hablar (o presiona 'x' para s
 
 {majo}: Hola Simon, ¿cómo estás?
 {Simon}: ¡Todo bien! ¿Y tú?
-
+```
 
 Cliente 2 (maria):
-bash
+```bash
 Introduce tu nombre de usuario: maria
 Usuarios conectados:
 simon
@@ -116,6 +117,7 @@ Escribe el nombre de la persona con la que quieres hablar (o presiona 'x' para s
 
 {Simon}: ¡Todo bien! ¿Y tú?
 {majo}: Hola Simon, ¿cómo estás?
+```
 
 ## 3. Aspectos Logrados y No Logrados
 
