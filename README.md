@@ -136,9 +136,16 @@ Escribe el nombre de la persona con la que quieres hablar (o presiona 'x' para s
 
 ## 4. Conclusiones
 
-Este proyecto ha demostrado ser una buena implementación de un sistema de chat basado en el modelo cliente-servidor, utilizando C y sockets TCP. La capacidad de manejar múltiples clientes mediante hilos permite una comunicación eficiente y dinámica entre pares. Sin embargo, se ha identificado que la implementación actual tiene algunas limitaciones, como la falta de autenticación y el manejo limitado de desconexiones abruptas. Para futuros desarrollos, se recomienda trabajar en estas áreas, así como mejorar la experiencia de usuario en la consola.
+Este proyecto ha permitido implementar una solución de comunicación en tiempo real utilizando una arquitectura cliente-servidor basada en sockets TCP/IP. A lo largo del desarrollo, se abordaron desafíos técnicos relacionados con la concurrencia, la gestión de múltiples conexiones y la transferencia de mensajes entre clientes en una red.
 
-En resumen, este proyecto logra su objetivo principal de permitir una comunicación efectiva entre clientes conectados a través de un servidor, lo cual es una base sólida para continuar mejorando.
+La implementación de hilos (threads) en el servidor y el cliente permitió gestionar varias conexiones de manera concurrente. Esto aseguró que cada cliente pudiera enviar y recibir mensajes en paralelo sin interferir con otros usuarios. El protocolo diseñado permitió que los usuarios eligieran con quién chatear, facilitando la creación de canales de comunicación privados entre pares, proporcionando una experiencia de usuario controlada. Esta arquitectura puede expandirse en futuras iteraciones para soportar chats grupales.
+
+Un aspecto clave fue el manejo adecuado de errores, como las desconexiones inesperadas de los clientes. Se utilizó la señal SIGPIPE para evitar que el servidor se cerrara abruptamente, asegurando que continuara funcionando de manera estable, lo cual es crucial para la robustez del sistema.
+
+Aunque el proyecto ha cumplido con los requisitos iniciales, hay áreas que podrían mejorarse:
+
+- *Escalabilidad:* Aunque el servidor puede manejar hasta 100 conexiones, se podría mejorar la escalabilidad mediante el uso de un pool de hilos o la distribución de la carga en varios servidores.
+- *Protocolo de Mensajes:* Se podría desarrollar un protocolo más robusto con comandos explícitos, lo que permitiría extender la aplicación para incluir funcionalidades como conversaciones grupales, envío de archivos o emojis.
 
 ## 5. Referencias
 - [Documentación de Sockets en C](https://www.geeksforgeeks.org/socket-programming-in-c-cpp/)
